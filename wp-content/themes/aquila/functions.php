@@ -12,8 +12,11 @@
 
 add_action( 'wp_enqueue_scripts', 'aquila_scripts' );
 function aquila_scripts(){
-    //stylesheets
-    wp_enqueue_style('main-styles',get_stylesheet_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
+    //Register styles and scripts
+    wp_register_style('main-style',get_stylesheet_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
+    wp_register_script('main-js', get_template_directory_uri() . '/assets/main.js',[],filemtime(get_template_directory() . '/assets/main.js'), false);
 
-    //Scripts
+    //Enqueue Styles and Scripts
+    wp_enqueue_style('main-style');
+    wp_enqueue_script('main-js');
 }
