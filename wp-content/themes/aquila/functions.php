@@ -5,9 +5,14 @@
  * @package Aquila
  */
 
-    // echo "<pre>";
-    // print_r(filemtime(get_template_directory()));
-    // wp_die();
+if (! defined('AQUILA_DIR_PATH')) {
+    define('AQUILA_DIR_PATH', untrailingslashit( get_template_directory() ));
+}
+
+require_once AQUILA_DIR_PATH . '/inc/helpers/autoloader.php';
+    echo "<pre>";
+    print_r(AQUILA_DIR_PATH);
+    wp_die();
 
 
 add_action( 'wp_enqueue_scripts', 'aquila_scripts' );
