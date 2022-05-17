@@ -22,7 +22,6 @@ function get_aquila_theme_instance(){
 }
 get_aquila_theme_instance();
 
-add_action( 'wp_enqueue_scripts', 'aquila_enqueue_scripts' );
-function aquila_enqueue_scripts(){
-
-}
+// add_action( 'wp_enqueue_scripts', 'aquila_enqueue_scripts' );
+// function aquila_enqueue_scripts(){
+// }

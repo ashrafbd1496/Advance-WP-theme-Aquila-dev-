@@ -16,4 +16,9 @@
     <?php if (function_exists('wp_body_open')) {
      wp_body_open();
     }?>
-    <div class="header">Header</div>
+
+    <div id="page" class="site">
+        <div class="site-header" id="masthead" role="banner">
+            <?php get_template_part('template-parts/header/nav'); ?>
+        </div>
+            <div class="content" class="site-content">
