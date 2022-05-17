@@ -11,11 +11,20 @@ use AQUILA_THEME\Inc\Traits\Singleton;
 class AQUILA_THEME{
 	use Singleton;
 	protected function __construct(){
+		Assets::get_instance();
 		//load class
-		wp_die('hello');
-		$this->set_hooks();
+		$this->setup_hooks();
+
 	}
-	protected function set_hooks(){
-		//action and filters 
+	protected function setup_hooks(){
+		/**
+		 * Actions.
+		 */
+		
 	}
+
+
+
+
+
 }

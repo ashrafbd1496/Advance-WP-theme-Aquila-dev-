@@ -32,6 +32,10 @@ function autoloader( $resource = '' ) {
 		str_replace( '_', '-', strtolower( $resource ) )
 	);
 
+ 	// echo "<pre>";
+  //   print_r($path);
+  //   wp_die();
+    
 	/**
 	 * Time to determine which type of resource path it is,
 	 * so that we can deduce the correct file path for it.
