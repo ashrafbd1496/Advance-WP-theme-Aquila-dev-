@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 	<div class="content">
-		Content goes here
+		Content of Index Page
+	
 	</div>
 <?php get_footer(); ?>
