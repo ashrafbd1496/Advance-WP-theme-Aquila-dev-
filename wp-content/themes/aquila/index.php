@@ -9,7 +9,7 @@
 	<div id="primary">
 		<main class="site-main mt-5" id="main" role="main">
 			<?php 
-			if (have_posts()) { ?>
+			if (have_posts()) : ?>
 				<div class="container">
 				 <?php 
 					if (is_home() && ! is_front_page()) { ?>
@@ -27,8 +27,7 @@
 						 	if (0 === $i % $number_of_columns){ ?>
 						 		<div class="col-lg-4 col-md-6 col-sm-12">
 						 	<?php } ?>
-						 	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						 	<div><?php echo wp_trim_words( get_the_excerpt(), 20 ); ?></div>
+						 	<?php get_template_part('template-parts/content'); ?>
 						 	 <?php $i++;
 						 	if (0 !== $i && 0 === $i % $number_of_columns) { ?>
 						 		</div>
@@ -37,7 +36,10 @@
 						 ?>
 				  </div>
 				</div>
-			<?php }
+			<?php 
+		else:
+			get_template_part('template-parts/content-none');
+		endif;
 			 ?>
 		</div>
 	</div>
