@@ -12,7 +12,11 @@
  ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <?php if (function_exists('the_custom_logo')) {
+  <div class="container">
+
+  <?php
+
+   if (function_exists('the_custom_logo')) {
       the_custom_logo();
   } ?>
 
@@ -67,4 +71,5 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
+</div>
 </nav>
