@@ -40,8 +40,8 @@
 		else:
 			get_template_part('template-parts/content-none');
 		endif;
-			 ?>
-		</div>
+		?>
+		</main>
 	</div>
 
 <?php get_footer(); ?>
