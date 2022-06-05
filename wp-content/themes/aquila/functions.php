@@ -13,6 +13,7 @@ if (! defined('AQUILA_DIR_URI')) {
 }
 
 require_once AQUILA_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once AQUILA_DIR_PATH . '/inc/helpers/template-tags.php';
     // echo "<pre>";
     // print_r(AQUILA_DIR_URI);
     // wp_die();

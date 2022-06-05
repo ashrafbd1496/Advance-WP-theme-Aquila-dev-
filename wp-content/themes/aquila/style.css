@@ -14,3 +14,12 @@ Text Domain: aquila
 Tags: blog-theme
 
 */
+img{
+	width: 100%;
+	height: auto;
+}
+img.attachment-featured-large.size-featured-image{
+	display: block;
+	width: 300px;
+	height: auto;
+}
