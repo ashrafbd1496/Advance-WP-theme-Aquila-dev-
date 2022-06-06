@@ -1,6 +1,6 @@
 <?php 
 
-function get_the_post_custom_thumbnail($post_id, $size='featured-image', $additional_attributes = [] ){
+function get_the_post_custom_thumbnail($post_id, $size='featured-thumbnail', $additional_attributes = [] ){
 	$custom_thumbnail = '';
 	if (null === $post_id) {
 		$post_id = get_the_ID();
@@ -16,12 +16,14 @@ function get_the_post_custom_thumbnail($post_id, $size='featured-image', $additi
 		get_post_thumbnail_id( $post_id ),
 		$size,
 		false,
-		$additional_attributes
+		$attributes
 	);
 	}
 	return $custom_thumbnail;
 }
-
+/**
+ * Renders Custom Thumbnail with Lazy Load.
+ */
 function the_post_custom_thumbnail($post_id, $size='featured-thumbnail', $additional_attributes = [] ){
 	echo  get_the_post_custom_thumbnail($post_id, $size, $additional_attributes);
 }
