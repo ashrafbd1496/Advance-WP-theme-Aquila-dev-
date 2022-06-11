@@ -18,3 +18,9 @@ img{
 	width: 100%;
 	height: auto;
 }
+/**
+ * entry meta
+ */
+.updated:not(.published){
+    display: none;
+}
