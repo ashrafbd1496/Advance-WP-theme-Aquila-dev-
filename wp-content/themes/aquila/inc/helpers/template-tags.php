@@ -46,3 +46,10 @@ function aquila_posted_on(){
 	);
 	echo '<span class="posted-on text-secondary">' . $posted_on .'</span>';
 }
+function aquila_posted_by(){
+	$byline = sprintf(
+		esc_html_x('  By %s','post_author','aquila'),
+		'<span class="author vcard"><a href="'. esc_url(get_author_posts_url( get_the_author_meta('ID'))).'">'. esc_html(get_the_author()).'</a></span>'
+	);
+	echo '<span class="byline text-secondary">'. $byline .'</span>';
+}
