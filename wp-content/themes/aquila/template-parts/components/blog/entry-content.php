@@ -23,6 +23,7 @@
         }
         else{
             aquila_the_excerpt(100);
+            echo aquila_the_excerpt_more();
         }
      ?>
 </div>
