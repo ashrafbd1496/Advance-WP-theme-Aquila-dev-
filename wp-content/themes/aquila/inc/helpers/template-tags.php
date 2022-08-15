@@ -68,7 +68,7 @@ function aquila_the_excerpt($trim_character_count = 0){
 
 function aquila_the_excerpt_more($more = ''){
 	if ( ! is_single()) {
-		$more = sprintf('<button class="btn ml-3 btn-info"><a class="aquila-read-more text-white" href="%1$s">%2$s</a></button>',
+		$more = sprintf('<button class="btn btn-info"><a class="aquila-read-more text-white" href="%1$s">%2$s</a></button>',
 			get_permalink(get_the_ID() ),
 			__('Read More', 'aquila')
 

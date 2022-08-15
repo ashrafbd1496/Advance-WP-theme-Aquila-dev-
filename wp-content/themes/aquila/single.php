@@ -1,47 +1,70 @@
 <?php
 /**
- * The template for displaying all single posts and attachments
+ * Single post template file.
  *
- * @package aquila
-
+ * @package Aquila
  */
-  
-get_header(); ?>
-  
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
-  
-        <?php
-        // Start the loop.
-        while ( have_posts() ) : the_post();
-  
-            /*
-             * Include the post format-specific template for the content. If you want to
-             * use this in a child theme, then include a file called called content-___.php
-             * (where ___ is the post format) and that will be used instead.
-             */
-            get_template_part( 'content', get_post_format() );
-  
-            // If comments are open or we have at least one comment, load up the comment template.
-            if ( comments_open() || get_comments_number() ) :
-                comments_template();
-            endif;
-  
-            // Previous/next post navigation.
-            the_post_navigation( array(
-                'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
-                    '<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
-                    '<span class="post-title">%title</span>',
-                'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
-                    '<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
-                    '<span class="post-title">%title</span>',
-            ) );
-  
-        // End the loop.
-        endwhile;
-        ?>
-  
-        </main><!-- .site-main -->
-    </div><!-- .content-area -->
-  
-<?php get_footer(); ?>
+
+get_header();
+
+?>
+
+    <div id="primary">
+        <main id="main" class="site-main mt-5" role="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-12">
+                        <?php
+                        if ( have_posts() ) :
+                            ?>
+                            <div class="post-wrap">
+                            <?php
+                            if ( is_home() && ! is_front_page() ) {
+                                ?>
+                                <header class="mb-5">
+                                    <h1 class="page-title screen-reader-text">
+                                        <?php single_post_title(); ?>
+                                    </h1>
+                                </header>
+                                <?php
+                            }
+
+                            while ( have_posts() ) : the_post();
+
+                                get_template_part( 'template-parts/content' );
+
+                            endwhile;
+                            ?>
+
+                        <?php
+
+                        else :
+
+                            get_template_part( 'template-parts/content-none' );
+
+                            ?>
+
+                            </div>
+                        <?php
+                        endif;
+
+                        // For Single Post loadmore button, uncomment this code and comment next and prev link code below.
+//                       echo do_shortcode( '[single_post_listings]' )
+                        ?>
+                    </div>
+                    <?php
+                    // Next and previous link for page navigation.
+                    ?>
+                    <div class="prev-link"><?php previous_post_link(); ?></div>
+                    <div class="next-link"><?php next_post_link(); ?></div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <?php get_sidebar('primary'); ?>
+                </div>
+            </div>
+        </main>
+    </div>
+
+<?php
+
+get_footer();
