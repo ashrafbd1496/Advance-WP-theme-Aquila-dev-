@@ -30,3 +30,11 @@ img{
 /*.nav-item:hover .dropdown-menu:not(.show){
 	display: block;
 }*/
+
+/**
+ * Pagination style
+ */
+span.page-numbers.current span {
+    background: gray;
+    color: #fff;
+}
