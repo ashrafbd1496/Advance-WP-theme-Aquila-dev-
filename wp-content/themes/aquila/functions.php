@@ -26,3 +26,18 @@ get_aquila_theme_instance();
 // add_action( 'wp_enqueue_scripts', 'aquila_enqueue_scripts' );
 // function aquila_enqueue_scripts(){
 // }
+
+
+function aquila_customize_css(){ ?>
+    <style type="text/css">
+        .footer { 
+            min-height:100%;
+            background-image: url('<?php echo get_theme_mod( "footer_image_upload_setting");?>'), linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6));
+            background-blend-mode: overlay;
+            background-size:cover;
+            }
+
+        
+    </style>
+<?php }
+add_action( 'wp_footer', 'aquila_customize_css');

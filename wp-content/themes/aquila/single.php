@@ -59,8 +59,8 @@ get_header();
                     <div class="prev-link"><?php previous_post_link(); ?></div>
                     <div class="next-link"><?php next_post_link(); ?></div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <?php get_sidebar(); ?>
+                <div class="col-lg-4 col-md-4 col-sm-12 sidebar">
+                  <?php get_sidebar(); ?>
                 </div>
             </div>
         </main>

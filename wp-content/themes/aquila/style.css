@@ -38,3 +38,38 @@ span.page-numbers.current span {
     background: gray;
     color: #fff;
 }
+/**
+ * post widget style
+ */
+.widget_categories{
+    list-style: none;
+}
+.wp-block-categories li {
+    list-style: none;
+    margin: 10px;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    width: 200px;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+   
+}
+.wp-block-categories li:hover{
+    border: none;
+    
+}
+
+.sidebar #block-8{
+     list-style: none;
+     text-decoration: none;
+     margin-left: 40px;
+     padding: 5px;
+}
+.footer{
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  
+
+}
