@@ -17,6 +17,7 @@ class Sidebars{
 		 * Actions.
 		 */
 		add_action('widgets_init',[$this, 'register_sidebars']);
+        add_action('widgets_init',[$this, 'register_aquila_widget']);
 	}
 
 	public function register_sidebars(){
@@ -51,6 +52,10 @@ class Sidebars{
 
 	}
 
+    //Aquila widget register function
+    public function register_aquila_widget(){
+        register_widget('AQUILA_THEME\Inc\Aquila_Widget'); //used widget class name
+    }
 
 
 }

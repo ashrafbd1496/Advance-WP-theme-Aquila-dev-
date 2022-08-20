@@ -36,8 +36,6 @@ function aquila_customize_css(){ ?>
             background-blend-mode: overlay;
             background-size:cover;
             }
-
-        
     </style>
 <?php }
 add_action( 'wp_footer', 'aquila_customize_css');
