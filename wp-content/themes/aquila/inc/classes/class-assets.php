@@ -22,6 +22,7 @@ class Assets{
 	public function register_styles(){ 
     	wp_register_style('bootstrap-css', AQUILA_DIR_URI . '/assets/src/library/css/bootstrap.min.css', array(),false, 'all');
     	 wp_register_style('style-css',get_stylesheet_directory_uri() . '/style.css', array(), filemtime(AQUILA_DIR_PATH . '/style.css'), 'all');
+    	  wp_register_style('fonts-css',get_stylesheet_directory_uri() . '/assets/src/library/fonts/fonts.css', [], false, 'all');
 
     	 //Enqueue Styles
     	  wp_enqueue_style('bootstrap-css');
