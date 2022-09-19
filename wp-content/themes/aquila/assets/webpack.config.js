@@ -71,7 +71,7 @@ module.exports = (env, argv) => ({
 	},
 	optimization: {
 		minimizer: [
-			new OptimizeCssAssetsPlugin({
+			new CssMinimizerPlugin({
 				cssProcessor: cssnano,
 			}),
 			new UglifyJsPlugin({
@@ -79,7 +79,8 @@ module.exports = (env, argv) => ({
 				parallel: true, 
 				sourceMap: false,
 
-			}),
+			})
+			]
 	},
 
 });

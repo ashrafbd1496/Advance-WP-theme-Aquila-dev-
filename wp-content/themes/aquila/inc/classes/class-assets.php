@@ -25,7 +25,7 @@ class Assets{
     	  wp_register_style('fonts-css',get_stylesheet_directory_uri() . '/assets/src/library/fonts/fonts.css', [], false, 'all');
 
     	 //Enqueue Styles
-    	  wp_enqueue_style('bootstrap-css');
+    	wp_enqueue_style('bootstrap-css');
 	    wp_enqueue_style('style-css');
 	   
 	}
