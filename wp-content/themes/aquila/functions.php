@@ -17,8 +17,8 @@ if (! defined('AQUILA_BUILD_URI')) {
 if (! defined('AQUILA_BUILD_JS_URI')) {
     define('AQUILA_BUILD_JS_URI', untrailingslashit( get_template_directory_uri() ).'/build/js'); 
 }
-if (! defined('AQUILA_JS_DIR_PATH')) {
-    define('AQUILA_JS_DIR_PATH', untrailingslashit( get_template_directory() ). '/build/js');
+if (! defined('AQUILA_BUILD_JS_DIR_PATH')) {
+    define('AQUILA_BUILD_JS_DIR_PATH', untrailingslashit( get_template_directory() ). '/build/js');
 }
 if (! defined('AQUILA_BUILD_IMG_URI')) {
     define('AQUILA_BUILD_IMG_URI', untrailingslashit( get_template_directory_uri() ).'/build/src/img'); 
@@ -26,6 +26,13 @@ if (! defined('AQUILA_BUILD_IMG_URI')) {
 
 if (! defined('AQUILA_BUILD_CSS_URI')) {
     define('AQUILA_BUILD_CSS_URI', untrailingslashit( get_template_directory_uri() ).'/build/css'); 
+}
+if ( ! defined( 'AQUILA_BUILD_CSS_DIR_PATH' ) ) {
+    define( 'AQUILA_BUILD_CSS_DIR_PATH', untrailingslashit( get_template_directory() ) . '/assets/build/css' );
+}
+
+if ( ! defined( 'AQUILA_BUILD_LIB_URI' ) ) {
+    define( 'AQUILA_BUILD_LIB_URI', untrailingslashit( get_template_directory_uri() ) . '/assets/build/library' );
 }
 
 
